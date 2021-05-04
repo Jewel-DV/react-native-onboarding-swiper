@@ -127,6 +127,7 @@ class Onboarding extends Component {
       onDone,
       skipLabel,
       nextLabel,
+      doneLabel,
       allowFontScalingButtons,
       SkipButtonComponent,
       DoneButtonComponent,
@@ -214,6 +215,7 @@ class Onboarding extends Component {
               onNext={this.goNext}
               skipLabel={skipLabel}
               nextLabel={nextLabel}
+              doneLabel={doneLabel}
               allowFontScaling={allowFontScalingButtons}
               SkipButtonComponent={SkipButtonComponent}
               DoneButtonComponent={DoneButtonComponent}
@@ -279,6 +281,7 @@ Onboarding.defaultProps = {
   showDone: true,
   skipLabel: 'Skip',
   nextLabel: 'Next',
+  doneLabel: 'Get Started',
   onSkip: null,
   onDone: null,
   SkipButtonComponent: SkipButton,

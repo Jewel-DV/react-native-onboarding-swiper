@@ -19,6 +19,7 @@ const Pagination = ({
   onDone,
   skipLabel,
   nextLabel,
+  doneLabel,
   allowFontScaling,
   SkipButtonComponent,
   NextButtonComponent,
@@ -57,16 +58,10 @@ const Pagination = ({
 
   const DoneButtonFinal = showDone && isLastPage && (
     <DoneButtonComponent
-      isLight={isLight}
+      doneLabel={doneLabel}
       allowFontScaling={allowFontScaling}
-      onPress={() => {
-        if (typeof onDone === 'function') {
-          if (controlStatusBar) {
-            StatusBar.setBarStyle('default', true);
-          }
-          onDone();
-        }
-      }}
+      isLight={isLight}
+      onPress={onNext}
     />
   );
 
