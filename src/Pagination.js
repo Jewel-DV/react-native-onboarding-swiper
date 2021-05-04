@@ -19,7 +19,6 @@ const Pagination = ({
   onDone,
   skipLabel,
   nextLabel,
-  doneLabel,
   allowFontScaling,
   SkipButtonComponent,
   NextButtonComponent,
@@ -58,10 +57,16 @@ const Pagination = ({
 
   const DoneButtonFinal = showDone && isLastPage && (
     <DoneButtonComponent
-      doneLabel={doneLabel}
-      allowFontScaling={allowFontScaling}
       isLight={isLight}
-      onPress={onNext}
+      allowFontScaling={allowFontScaling}
+      onPress={() => {
+        if (typeof onDone === 'function') {
+          if (controlStatusBar) {
+            StatusBar.setBarStyle('default', true);
+          }
+          onDone();
+        }
+      }}
     />
   );
 
@@ -121,7 +126,7 @@ const styles = {
     paddingHorizontal: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    // alignItems: 'center',
   },
   buttonLeft: {
     width: 200,

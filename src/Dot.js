@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Dot = ({ isLight, selected }) => {
   let backgroundColor;
   if (isLight) {
-    backgroundColor = selected ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.3)';
+    backgroundColor = selected ? '#3989ca' : 'rgba(215, 223, 223, 0.5)';
   } else {
     backgroundColor = selected ? '#fff' : 'rgba(255, 255, 255, 0.5)';
   }
@@ -14,6 +14,7 @@ const Dot = ({ isLight, selected }) => {
       style={{
         ...styles.dot,
         backgroundColor,
+        width: selected ? 19 : 10
       }}
     />
   );
@@ -26,9 +27,9 @@ Dot.propTypes = {
 
 const styles = {
   dot: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
+    width: 10,
+    height: 10,
+    borderRadius: 12,
     marginHorizontal: 3,
   },
 };
