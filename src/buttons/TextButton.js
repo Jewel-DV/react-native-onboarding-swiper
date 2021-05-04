@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const TextButton = ({ size, onPress, textStyle, allowFontScaling, style, children }) => (
   <View style={{ flex: 0, paddingHorizontal: 10, ...style }}>
     <TouchableOpacity
-      style={{ flex: 0 }}
+      style={{ backgroundColor: '#37d05b', width: 200, alignItems: 'center', justifyContent: 'center', paddingVertical: 14, paddingHorizontal: 48, borderRadius: 8 }}
       onPress={onPress}
       hitSlop={{ top: 15, bottom: 15, left: 15, right: 15 }}
     >
