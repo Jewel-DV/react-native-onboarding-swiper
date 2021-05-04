@@ -58,6 +58,7 @@ const Pagination = ({
   const DoneButtonFinal = showDone && isLastPage && (
     <DoneButtonComponent
       isLight={isLight}
+      doneLabel={doneLabel}
       allowFontScaling={allowFontScaling}
       onPress={() => {
         if (typeof onDone === 'function') {
