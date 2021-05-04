@@ -39,9 +39,9 @@ const Page = ({
 
   return (
     <View style={[styles.container, containerStyles, { width, height }]}>
-      <View style={[styles.imageContainer, imageContainerStyles]}>{image}</View>
       {titleElement}
       {subtitleElement}
+      <View style={[styles.imageContainer, imageContainerStyles]}>{image}</View>
     </View>
   );
 };
@@ -76,30 +76,29 @@ const styles = {
   container: {
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: potrait ? 'center' : 'flex-start',
+    // alignItems: 'center',
     paddingTop: potrait ? 0 : 10,
   },
   imageContainer: {
+    marginTop: 78,
     flex: 0,
     paddingBottom: potrait ? 60 : 10,
     alignItems: 'center',
     width: '100%',
   },
   padding: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
   },
   title: {
-    textAlign: 'center',
+    fontWeight: '500',
     fontSize: 26,
-    color: '#fff',
+    color: '#333',
     paddingBottom: 15,
   },
   titleLight: {
     color: '#000',
   },
   subtitle: {
-    textAlign: 'center',
     fontSize: 16,
     color: 'rgba(255, 255, 255, 0.7)',
   },
