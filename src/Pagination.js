@@ -19,6 +19,7 @@ const Pagination = ({
   onDone,
   skipLabel,
   nextLabel,
+  doneLabel,
   allowFontScaling,
   SkipButtonComponent,
   NextButtonComponent,
